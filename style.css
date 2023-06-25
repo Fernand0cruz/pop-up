@@ -1,0 +1,176 @@
+*{
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+#popUp {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    user-select: none;
+}
+#popUp_content {
+    position: absolute;
+    background-image: url("https://images.unsplash.com/photo-1559563458-527698bf5295?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    border: 1.25rem solid white;
+    border-radius: 1000px 1000px 0 0;
+}
+#popUp_content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #99764c;
+    opacity: .8;
+    border-radius: 1000px 1000px 15px 15px;
+}
+.popUp_border {
+    border: .25rem solid #645d54;
+    border-radius: 1000px 1000px 15px 15px;
+}
+#fecharPopUp {
+    position: relative;
+    left: 35px;
+    cursor: pointer;
+    background: #ae9372;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    border: .4rem solid white;
+    top: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.popUp_ {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+}
+.popUp_ span {
+    font-size: 2.5rem;
+    display: block;
+}
+.popUp_ :nth-child(5) {
+    margin: 1rem 0 0;
+}
+.discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.discount :nth-child(1) {
+    font-size: 10rem;
+}
+.discount div :nth-child(1) {
+    font-size: 5rem;
+}
+span.code {
+    background-color: white;
+    color: #ae9372;
+    cursor: pointer;
+    user-select: text;
+    font-size: 2rem;
+    padding: .4rem;
+    border-radius: 0 0 15px 15px;
+}
+#tooltip {
+    visibility: hidden;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+}
+.element {
+    position: absolute;
+    width: 60px;
+    height: 55px;
+    background-image: url("stars.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+#element_1 {
+    top: -25px;
+    right: 45px;
+}
+#element_2 {
+    left: -29px;
+}
+#element_3 {
+    right: -34px;
+    bottom: 45px;
+}
+@media (max-width: 767px) {
+    .popUp_ {
+        padding: 1rem;
+    }
+
+    #fecharPopUp {
+        left: 15px;
+    }
+
+    #element_1 {
+        right: 27px;
+    }
+}
+@media (max-width: 450px) {
+    #popUp_content {
+        border: 1rem solid white;
+    }
+
+    .popUp_ {
+        padding: .5rem 2.5rem;
+    }
+
+    #fecharPopUp {
+        left: -10px;
+    }
+
+    .popUp_ span {
+        font-size: 1.5rem;
+    }
+
+    .discount :nth-child(1) {
+        font-size: 8rem;
+    }
+
+    .discount div :nth-child(1) {
+        font-size: 4rem;
+    }
+
+    span.code {
+        font-size: 1.5rem;
+        border-radius: 0;
+    }
+
+    #tooltip {
+        font-size: 1rem;
+    }
+
+    #element_1 {
+        right: 0px;
+    }
+}
+@media (max-width: 350px) {
+    .popUp_ {
+        padding: 1rem;
+    }
+
+    #fecharPopUp {
+        left: -15px;
+    }
+
+    #element_1 {
+        right: -15px;
+    }
+}
